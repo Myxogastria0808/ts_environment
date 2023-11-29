@@ -7,11 +7,12 @@
         "prepare": "husky install",
         "build": "webpack --mode=production",
         "start": "webpack-cli server --mode=development",
-        "lint": "eslint \"./src/**/*.{js,ts}\"",
+        "lint": "prettier --write \"./src/**/*.{js,ts}\" && eslint \"./src/**/*.{js,ts}\"",
         "prettier": "prettier --write \"./src/**/*.{js,ts}\""
     },
     "lint-staged": {
-        "*.{js, ts}": "eslint"
+        "*.{js, ts, html, css, json}": "prettier --write \"./src/**/*.{js,ts, html, css, json}\"",
+        "*.{js, ts}": "eslint --fix \"src/**/*.{js,ts}\""
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^6.13.1",
