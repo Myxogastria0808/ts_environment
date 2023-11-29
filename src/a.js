@@ -6,3 +6,9 @@ const A = () => {
 };
 
 A();
+
+const B = (qwerty) => {
+    return qwerty;
+};
+
+B(123);
