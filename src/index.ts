@@ -3,3 +3,5 @@ const nyaki: number = 10;
 
 console.log(hello);
 // console.log(`nyaki: ${nyaki}`);
+
+aaa;
