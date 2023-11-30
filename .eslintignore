@@ -1,0 +1,11 @@
+.husky
+dist
+node_modules
+.eslintrc.cjs
+.gitignore
+.prettierrc
+package.json
+README.md
+tsconfig.json
+webpack.config.json
+yarn.lock

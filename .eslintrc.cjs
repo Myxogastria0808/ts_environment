@@ -18,6 +18,5 @@ module.exports = {
         project: './tsconfig.json', // TypeScriptのLint時に参照するconfigファイルを指定　(tsconfigRootDirからの相対パス)
         tsconfigRootDir: __dirname, //tsconfigRootDirはプロジェクトルートの絶対パスを指定する
     },
-    ignorePatterns: ['*.cjs'],
     rules: {},
 };
