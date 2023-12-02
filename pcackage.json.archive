@@ -1,0 +1,31 @@
+//stylelintを導入した際の設定サンプル
+
+{
+    ...,
+
+    "scripts": {
+        "prepare": "husky install",
+        "build": "webpack --mode=production",
+        "start": "webpack-cli server --mode=development",
+        "format": "prettier --write \"./src/**/*.{js,ts, tsx, jsx, css}\"",
+        "format:js": "prettier --write \"./src/**/*.{js,ts, tsx, jsx}\"",
+        "format:css": "prettier --write \"./src/**/*.{css}\"",
+        "lint": "eslint \"./src/**/*.{js,ts, tsx, jsx, css}\" && prettier --check \"./**/*.{js,ts, tsx, jsx, css}\"",
+        "lint:js": "eslint \"./src/**/*.{js,ts, tsx, jsx}\" && prettier --check \"./**/*.{js,ts, tsx, jsx}\"",
+        "lint:css": "eslint \"./src/**/*.{css}\" && prettier --check \"./**/*.{css}\""
+    },
+    "lint-staged": {
+        "*.{js, ts, jsx, tsx}": [
+            "yarn fprmat:js",
+            "yarn lint:js"
+        ],
+        "*.{css}": [
+            "yarn fprmat:css",
+            "yarn lint:css"
+        ]
+    },
+    
+    "devDependencies": {
+        ...
+    }
+}
